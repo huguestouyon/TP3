@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
+body {
+    color: black;
+    background-color: white;
+}
+
+.darkmode {
+    color: white;
+    background-color: black;
+}
+
 .container {
     margin: 0 auto;
     width: 600px;
 }
 
-.container h1 {
+.container .title {
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -21,7 +31,49 @@
 
 .progress-bar {
     width: 0%;
-    background-color: red;
+    background-color: white;
     text-align: center;
 }
 
+.bg-bar {
+    width: 100%;
+    background-color: gray;
+}
+
+.result {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 1rem;
+    word-wrap: break-word;
+    min-height: 2rem;
+}
+
+.resultDark {
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.animation{
+    width: 100px;
+    background-color: red;
+    height: 100px;
+    margin: 1rem auto;
+}
+
+.dark {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* .btn {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn button {
+    padding: 5px 15px;
+} */
