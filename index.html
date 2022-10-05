@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/app.js" defer></script>
+    <script src="script/test.js" defer></script>
     <title>TP 3</title>
 </head>
 <body>
@@ -13,11 +13,15 @@
         <h1 class="title">Projet JS</h1>
         
         <div class="animation"></div>
-        <button class="" onclick="bold()">B</button>
-        <button class="" onclick="underline()">Underline</button>
-        <button class="" onclick="h1()">H1</button>
+        <div class="btn">
+            <button class="" onclick="bold()"><b>B</b></button>
+            <button class="" onclick="underline()"><u>U</u></button>
+            <button class="" onclick="h1()">H</button>
+            <button class="" onclick="p()">P</button>
+        </div>
+
         <form action="">
-            <textarea name="progress" id="text-area" cols="" rows="" maxlength="200"></textarea>
+            <textarea name="progress" id="text-area" cols="" rows=""></textarea>
         </form>
         <div class="bg-bar"><div id="p-bar" class="progress-bar">0%</div></div>
         <div class="result"></div>

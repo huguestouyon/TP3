@@ -1,7 +1,8 @@
 let textarea = document.querySelector("textarea"); //recupère le textarea (on peut utiliser aussi #text-area)
+let result = document.querySelector(".result");
 textarea.style.resize = 'none'; // impossible de resize le text-area
 textarea.spellcheck = false; // supprime la détection des fautes d'orthographes (possible de le faire en html)
-textarea.addEventListener("input", function () {
+textarea.addEventListener("input", event => {
     let target = event.currentTarget; // Identifie l'élément avant que l'évènement se produise
     let currentLength = target.value.length; // Identifier l'élèment à partir du moment où il s'est produit
     let progressBar = document.querySelector(".progress-bar");

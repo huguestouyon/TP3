@@ -11,7 +11,7 @@ body {
 
 .darkmode {
     color: white;
-    background-color: black;
+    background-color: rgb(26, 24, 24);
 }
 
 .container {
@@ -65,7 +65,7 @@ body {
     width: 100%;
 }
 
-/* .btn {
+.btn {
     display: flex;
     width: 100%;
     margin-bottom: 0.5rem;
@@ -76,4 +76,4 @@ body {
 
 .btn button {
     padding: 5px 15px;
-} */
+}
