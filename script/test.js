@@ -53,6 +53,10 @@ function underline() {
     ecris.value += "<u></u>" ;
 }
 
+function i() {
+    ecris.value += "<i></i>" ;
+}
+
 function h1() {
     ecris.value += "<h1></h1>" ;
 }
@@ -66,4 +70,9 @@ function darkmode() {
     let element = document.body; // l'élément body est sélectionné
     element.classList.toggle("darkmode"); // bascule vers darkmode
     lis.classList.toggle("resultDark");
+}
+
+// Refresh 
+function refresh(){
+    window.location.reload("Refresh")
 }

@@ -14,6 +14,16 @@ body {
     background-color: rgb(26, 24, 24);
 }
 
+.refresh {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.refresh button {
+    padding: 0.5rem 1rem;
+}
+
 .container {
     margin: 0 auto;
     width: 600px;
