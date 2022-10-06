@@ -14,7 +14,7 @@ ecris.addEventListener("keyup", function () {
     console.log(currentLength2)
     if (currentLength2 >= 100) {
         alert("Le maximum de caractère a été utilisé !");
-        
+        ecris.maxLength = currentLength;
     }
     if (currentLength2 <= 50) {
         progressBar.style.backgroundColor = 'green';

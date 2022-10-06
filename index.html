@@ -20,8 +20,8 @@
             <button class="" onclick="p()">P</button>
         </div>
 
-        <form action="">
-            <textarea name="progress" id="text-area" cols="" rows=""></textarea>
+        <form action=""><!-- Supprimer les copier/coller (sélection du texte et autre) -->
+            <textarea type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off name="progress" id="text-area" cols="" rows=""></textarea>
         </form>
         <div class="bg-bar"><div id="p-bar" class="progress-bar">0%</div></div>
         <div class="result"></div>
