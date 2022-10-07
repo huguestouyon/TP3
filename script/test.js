@@ -1,6 +1,6 @@
 const ecris = document.querySelector("textarea");
 const lis = document.querySelector(".result");
-let progressBar = document.querySelector(".progress-bar");
+const progressBar = document.querySelector(".progress-bar");
 ecris.style.resize = 'none'; // impossible de resize le text-area
 ecris.spellcheck = false; // supprime la détection des fautes d'orthographes (possible de le faire en html)
 
@@ -71,6 +71,16 @@ function darkmode() {
     let element = document.body; // l'élément body est sélectionné
     element.classList.toggle("darkmode"); // bascule vers darkmode
     lis.classList.toggle("resultDark");
+    ecris.classList.toggle("resultDark");
+    document.querySelector(".dark-btn").classList.toggle("darkmode");
+    document.querySelector(".bg-bar").classList.toggle("resultDark");
+    document.querySelector(".btn-refresh").classList.toggle('resultDark');
+    document.querySelector(".refresh-svg").classList.toggle('svg-dark');
+    let btnClick = document.querySelectorAll(".btn-click");
+    function btnC(btnClick) {
+        btnClick.classList.toggle("resultDark");
+    }
+    btnClick.forEach(btnC);
 }
 
 // Refresh  (reload la page fonctionne aussi)
