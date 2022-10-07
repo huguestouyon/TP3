@@ -1,5 +1,6 @@
 const ecris = document.querySelector("textarea");
 const lis = document.querySelector(".result");
+let progressBar = document.querySelector(".progress-bar");
 ecris.style.resize = 'none'; // impossible de resize le text-area
 ecris.spellcheck = false; // supprime la détection des fautes d'orthographes (possible de le faire en html)
 
@@ -8,13 +9,15 @@ ecris.addEventListener("keyup", function () {
     lis.innerHTML = resultat;
     currentLength = lis.innerText.length;
     currentLength2 = currentLength / 2;
-    let progressBar = document.querySelector(".progress-bar");
+    
     progressBar.style.width = currentLength2 + '%'; // Change la width selon le nombre de caractère
     progressBar.textContent = currentLength2 + '%'; // Afficher le %
-    console.log(currentLength2)
-    if (currentLength2 >= 100) {
-        alert("Le maximum de caractère a été utilisé !");
-        ecris.maxLength = currentLength;
+    if (currentLength >= 200) {
+    alert("Le maximum de caractère a été utilisé !");
+    ecris.setAttribute('maxLength', 0);
+    }
+    else {
+        ecris.removeAttribute("maxLength");
     }
     if (currentLength2 <= 50) {
         progressBar.style.backgroundColor = 'green';
@@ -29,19 +32,17 @@ ecris.addEventListener("keyup", function () {
     }
 });
 
-
-
 // Chgmt de couleurs
 ecris.addEventListener("mouseover", mouseOver);
 ecris.addEventListener("mouseout", mouseOut);
-let anim = document.querySelector(".animation");
+let anim = document.querySelector(".container-anim");
 // Souris sur l'éditeur de texte
 function mouseOver() {
-    anim.style.backgroundColor = "blue";
+    anim.style.display = "block";
 }
 // Souris en dehors de l'éditeur de texte
 function mouseOut() {
-    anim.style.backgroundColor = "red";
+    anim.style.display = "none";
 }
 
 // Btn 
@@ -72,7 +73,11 @@ function darkmode() {
     lis.classList.toggle("resultDark");
 }
 
-// Refresh 
-function refresh(){
-    window.location.reload("Refresh")
-}
+// Refresh  (reload la page fonctionne aussi)
+const refreshButton = document.querySelector('.btn-refresh');
+refreshButton.addEventListener('click', function() {
+    ecris.value = "";
+    lis.innerHTML = "";
+    progressBar.textContent = "0%";
+    progressBar.style.width = "0%";
+});

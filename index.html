@@ -11,7 +11,10 @@
 <body>
     <main class="container">
         <h1 class="title">Projet JS</h1>
-        <div class="animation"></div>
+        <!-- Animation copié du site https://loading.io/ -->
+        <div class="container-anim">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>        
         <div class="btn">
             <button class="" onclick="bold()"><b>B</b></button>
             <button class="" onclick="underline()"><u>U</u></button>
@@ -20,14 +23,14 @@
             <button class="" onclick="p()">P</button>
         </div>
 
-        <form action=""><!-- Supprimer les copier/coller (sélection du texte et autre) -->
-            <textarea type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off name="progress" id="text-area" cols="" rows=""></textarea>
+        <form class="form" action=""><!-- Supprimer les copier/coller -->
+            <textarea type="text" id="text-area" cols="" rows="" onpaste="return false;"></textarea>
         </form>
         <div class="bg-bar"><div id="p-bar" class="progress-bar">0%</div></div>
         <div class="result"></div>
-        <button class="dark" onclick="darkmode()">Dark Mode</button>
+        <button class="dark-btn" onclick="darkmode()">DarkMod</button>
         <div class="refresh">
-            <button onclick="refresh()">🔄</button>
+            <button class="btn-refresh">🔄</button>
         </div>
         
     </main>
