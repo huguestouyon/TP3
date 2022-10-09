@@ -30,6 +30,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: .1s;
 }
 
 .btn-style:hover {
@@ -39,10 +40,59 @@ body {
 }
 
 .grid {
-    height: 100vh;
+    height: 70vh;
+    margin: 2rem 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+}
+
+.div {
+    display: flex;
+}
+
+.btn-nb {
+    width: 70%;
+    height: 80%;
+    border-radius: .25em;
+    border: 2px solid var(--light);
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 1em;
+    margin: auto;
+}
+
+.btn-selected {
+    border-color: var(--red);
+    transition: .1s;
+}
+
+.btn-selected:hover {
+    background-color: var(--red);
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.separateur {
+    margin: 0 auto;
+    width: 50%;
+    height: 1px;
+    background-color: var(--red);
+    box-shadow: 5px 1px 5px #000000;
+    margin-bottom: 1rem;
+}
+
+.div-code {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.tryPass {
+    text-align: center;
 }
